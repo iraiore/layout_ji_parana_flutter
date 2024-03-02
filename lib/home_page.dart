@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -88,33 +90,63 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 50,),
           //seção icones ligar, endereço e compartilhar
-          const Row(
+          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Column(
-                children: [
-                  Icon(Icons.phone,
-                  color: Colors.blue,
-                  ),
-                  Text("Ligar")                  
-                ],
-              ),
-              Column(
-                children: [
-                  Icon(Icons.map,
-                  color: Colors.blue,
-                  ),
-                  Text("Endereço")                    
-                ],
-              ),
-              Column(
-                children: [
-                  Icon(Icons.share,
-                  color: Colors.blue,
-                  ),
-                  Text("Compartilhar")                    
-                ],
-              ),                            
+              TextButton(
+                 onPressed: (){},
+                 child: const Column(
+                  children: [
+                    Icon(
+                      Icons.facebook,
+                      size: 30,
+                      color: Colors.blue,
+                    ),
+                    Text('facebook',
+                      style: TextStyle(
+                        color:Colors.black,
+                        fontSize: 20,
+                      ),
+                    )
+                  ],
+                 ),
+                ),
+              TextButton(
+                 onPressed: (){},
+                 child: const Column(
+                  children: [
+                    Icon(
+                      Icons.map,
+                      size: 30,
+                      color: Colors.blue,
+                    ),
+                    Text('endereço',
+                      style: TextStyle(
+                        color:Colors.black,
+                        fontSize: 20,
+                      ),
+                    )
+                  ],
+                 ),
+                ),
+              TextButton(
+                 onPressed: (){},
+                 child: const Column(
+                  children: [
+                    Icon(
+                      Icons.share,
+                      size: 30,
+                      color: Colors.blue,
+                    ),
+                    Text('compartilhar',
+                      style: TextStyle(
+                        color:Colors.black,
+                        fontSize: 20,
+                      ),
+                    )
+                  ],
+                 ),
+                ),                            
             ],
           ),
           SizedBox(height: 50,),          
